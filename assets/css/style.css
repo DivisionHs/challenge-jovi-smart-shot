@@ -1,0 +1,555 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #f6f4f8;
+
+    color: #111111;
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   TELA
+========================================= */
+
+.tela {
+    width: 100%;
+
+    min-height: 100vh;
+
+    padding: 28px 18px 30px;
+}
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.topo {
+    width: 100%;
+
+    max-width: 430px;
+
+    margin: 0 auto 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+}
+
+
+.botao-voltar {
+    position: absolute;
+
+    left: 0;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border: none;
+
+    background: transparent;
+
+    color: #4c4df5;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 27px;
+
+    font-weight: bold;
+}
+
+
+.logo span {
+    color: #3f63f4;
+}
+
+
+.logo strong {
+    background: linear-gradient(
+        90deg,
+        #4d5df5,
+        #d34fad
+    );
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* =========================================
+   CONTEÚDO
+========================================= */
+
+.inicio {
+    width: 100%;
+
+    max-width: 430px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.apresentacao h1 {
+    font-size: 31px;
+
+    line-height: 1.08;
+
+    font-weight: 800;
+
+    margin-bottom: 24px;
+}
+
+
+.apresentacao h1 span {
+    display: block;
+
+    color: #4c4df5;
+}
+
+
+.apresentacao p {
+    max-width: 350px;
+
+    margin: 0 auto;
+
+    font-size: 16px;
+
+    line-height: 1.4;
+
+    color: #292929;
+}
+
+
+/* =========================================
+   CÂMERA
+========================================= */
+
+.camera-demonstracao {
+    width: 100%;
+
+    margin: 30px auto 28px;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+.camera-demonstracao img {
+    width: 100%;
+
+    max-width: 405px;
+
+    display: block;
+
+    border-radius: 24px;
+
+    object-fit: contain;
+}
+
+
+/* =========================================
+   MODOS
+========================================= */
+
+.selecao-modos {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 8px;
+
+    margin-bottom: 25px;
+}
+
+
+.modo-inicio {
+    min-height: 78px;
+
+    padding: 8px 4px;
+
+    border: none;
+
+    border-radius: 17px;
+
+    background-color: #ffffff;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    color: #171717;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.04);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.modo-inicio:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+
+.modo-inicio:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================================
+   ÍCONES DOS MODOS
+========================================= */
+
+.icone-modo {
+    width: 43px;
+
+    height: 43px;
+
+    object-fit: contain;
+
+    display: block;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   BOTÃO CONTINUAR
+========================================= */
+
+.botao-continuar {
+    width: 100%;
+
+    height: 68px;
+
+    border: none;
+
+    border-radius: 40px;
+
+    background-color: #4c4df5;
+
+    color: #ffffff;
+
+    font-size: 21px;
+
+    font-weight: normal;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 55px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(76, 77, 245, 0.22);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.botao-continuar:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(76, 77, 245, 0.28);
+}
+
+
+.botao-continuar:active {
+    transform: scale(0.98);
+}
+
+
+.icone-camera {
+    font-size: 23px;
+
+    line-height: 1;
+}
+
+
+/* =========================================
+   COMO FUNCIONA
+========================================= */
+
+.botao-como-funciona {
+    margin-top: 11px;
+
+    padding: 5px 10px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #5a5bf5;
+
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+
+.botao-como-funciona strong {
+    margin-left: 5px;
+
+    font-size: 21px;
+
+    font-weight: normal;
+}
+
+
+/* =========================================
+   AVISO
+========================================= */
+
+.aviso-orientacoes {
+    width: 92%;
+
+    min-height: 48px;
+
+    margin: 45px auto 0;
+
+    padding: 9px 14px;
+
+    border-radius: 12px;
+
+    background-color: #e9f2f0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+}
+
+
+.aviso-orientacoes p {
+    margin: 0;
+
+    font-size: 11px;
+
+    line-height: 1.3;
+
+    color: #363636;
+
+    text-align: left;
+}
+
+
+.icone-enquadramento {
+    color: #ffffff;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   RODAPÉ
+========================================= */
+
+footer {
+    text-align: center;
+
+    padding: 20px;
+
+    color: #777777;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   CELULARES PEQUENOS
+========================================= */
+
+@media (max-width: 380px) {
+
+    .tela {
+        padding-left: 14px;
+
+        padding-right: 14px;
+    }
+
+
+    .logo {
+        font-size: 23px;
+    }
+
+
+    .apresentacao h1 {
+        font-size: 27px;
+    }
+
+
+    .apresentacao p {
+        font-size: 14px;
+    }
+
+
+    .modo-inicio {
+        min-height: 70px;
+
+        font-size: 10px;
+    }
+
+
+    .icone-modo {
+        width: 36px;
+
+        height: 36px;
+    }
+
+
+    .botao-continuar {
+        gap: 35px;
+
+        font-size: 18px;
+    }
+}
+
+
+/* =========================================
+   TELAS MAIORES
+========================================= */
+
+@media (min-width: 600px) {
+
+    .tela {
+        padding-top: 45px;
+    }
+
+
+    .inicio {
+        max-width: 700px;
+    }
+
+
+    .topo {
+        max-width: 700px;
+    }
+
+
+    .apresentacao h1 {
+        font-size: 38px;
+    }
+
+
+    .apresentacao p {
+        font-size: 18px;
+
+        max-width: 500px;
+    }
+
+
+    .selecao-modos {
+        max-width: 600px;
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .modo-inicio {
+        min-height: 95px;
+    }
+
+
+    .icone-modo {
+        width: 48px;
+
+        height: 48px;
+    }
+
+
+    .botao-continuar {
+        max-width: 600px;
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .aviso-orientacoes {
+        max-width: 600px;
+    }
+}

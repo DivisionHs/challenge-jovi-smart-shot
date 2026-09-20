@@ -1,0 +1,505 @@
+/* ==============================
+   RESET
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f8f7fb;
+
+    color: #111;
+}
+
+
+/* ==============================
+   PÁGINA
+============================== */
+
+.pagina-compartilhar {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 30px 20px 35px;
+}
+
+
+/* ==============================
+   TOPO
+============================== */
+
+.topo-compartilhar {
+    width: 100%;
+    max-width: 900px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    margin-bottom: 28px;
+}
+
+
+.voltar-compartilhar {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #4d4df5;
+
+    font-size: 32px;
+
+    cursor: pointer;
+
+    padding: 0 10px;
+
+    transition: transform 0.2s ease;
+}
+
+
+.voltar-compartilhar:hover {
+    transform: translateX(-4px);
+}
+
+
+/* ==============================
+   LOGO
+============================== */
+
+.logo-compartilhar {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+.logo-jovi {
+    color: #4169e1;
+}
+
+
+.logo-smart {
+    color: #b94bd9;
+}
+
+
+/* ==============================
+   CONTEÚDO
+============================== */
+
+.conteudo-compartilhar {
+    width: 100%;
+    max-width: 620px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* ==============================
+   ÍCONE
+============================== */
+
+.icone-compartilhar {
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    background: #e9f3f2;
+
+    color: #4d4df5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    margin-bottom: 14px;
+}
+
+
+/* ==============================
+   TÍTULO
+============================== */
+
+.conteudo-compartilhar h1 {
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+
+.descricao-compartilhar {
+    font-size: 15px;
+
+    line-height: 1.4;
+
+    color: #444;
+
+    margin-bottom: 18px;
+}
+
+
+/* ==============================
+   FOTO
+============================== */
+
+.foto-compartilhar {
+    width: 100%;
+
+    height: 270px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background: #17171d;
+
+    margin-bottom: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(40, 35, 100, 0.12);
+}
+
+
+.foto-compartilhar img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+.sem-foto {
+    position: absolute;
+
+    inset: 0;
+
+    display: none;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+}
+
+
+.sem-foto.ativo {
+    display: flex;
+}
+
+
+.sem-foto span {
+    font-size: 40px;
+
+    color: #b94bd9;
+
+    margin-bottom: 10px;
+}
+
+
+.sem-foto p {
+    font-size: 14px;
+}
+
+
+/* ==============================
+   OPÇÕES
+============================== */
+
+.opcoes-compartilhar {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.opcao {
+    width: 100%;
+
+    min-height: 72px;
+
+    padding: 14px 18px;
+
+    border: 2px solid transparent;
+
+    border-radius: 17px;
+
+    background: white;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    text-align: left;
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 4px 15px rgba(50, 40, 120, 0.05);
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.opcao:hover {
+    border-color: #b94bd9;
+
+    transform: translateY(-2px);
+}
+
+
+.icone-opcao {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background: #eeeafd;
+
+    color: #4d4df5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+}
+
+
+.texto-opcao {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.texto-opcao strong {
+    font-size: 15px;
+}
+
+
+.texto-opcao small {
+    font-size: 12px;
+
+    color: #555;
+}
+
+
+/* ==============================
+   NOVA FOTO
+============================== */
+
+.nova-foto {
+    margin-top: 16px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #5a55e8;
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    cursor: pointer;
+}
+
+
+/* ==============================
+   FINALIZAR
+============================== */
+
+.finalizar {
+    width: 100%;
+
+    height: 52px;
+
+    margin-top: 10px;
+
+    border: none;
+
+    border-radius: 28px;
+
+    background: #4d4df5;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 18px rgba(77, 77, 245, 0.2);
+
+    transition: transform 0.2s ease;
+}
+
+
+.finalizar:hover {
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   AVISO
+============================== */
+
+.aviso-compartilhar {
+    width: 100%;
+    max-width: 455px;
+
+    min-height: 45px;
+
+    margin-top: 20px;
+
+    padding: 9px 15px;
+
+    border-radius: 12px;
+
+    background: #e9f3f2;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    text-align: center;
+}
+
+
+.aviso-compartilhar > span {
+    color: white;
+
+    font-size: 22px;
+}
+
+
+.aviso-compartilhar p {
+    font-size: 11px;
+
+    color: #222;
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+
+@media (max-width: 700px) {
+
+    .pagina-compartilhar {
+        padding: 25px 15px 30px;
+    }
+
+
+    .logo-compartilhar {
+        font-size: 24px;
+    }
+
+
+    .voltar-compartilhar {
+        font-size: 28px;
+    }
+
+
+    .conteudo-compartilhar h1 {
+        font-size: 26px;
+    }
+
+
+    .foto-compartilhar {
+        height: 250px;
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .logo-compartilhar {
+        font-size: 21px;
+    }
+
+
+    .voltar-compartilhar {
+        font-size: 25px;
+    }
+
+
+    .conteudo-compartilhar h1 {
+        font-size: 23px;
+    }
+
+
+    .foto-compartilhar {
+        height: 230px;
+
+        border-radius: 19px;
+    }
+
+
+    .opcao {
+        min-height: 68px;
+
+        padding: 12px 14px;
+    }
+
+
+    .icone-opcao {
+        width: 38px;
+        height: 38px;
+
+        font-size: 20px;
+    }
+
+}

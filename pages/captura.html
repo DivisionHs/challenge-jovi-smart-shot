@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JOVI Smart Shot - Captura</title>
+
+    <link rel="stylesheet" href="../assets/css/captura.css">
+
+</head>
+
+
+<body>
+
+    <main class="pagina-captura">
+
+
+        <!-- TOPO -->
+
+        <header class="topo-captura">
+
+            <button
+                class="voltar-captura"
+                type="button"
+                onclick="window.location.href='permissao.html'">
+
+                ←
+
+            </button>
+
+
+            <div class="logo-captura">
+
+                <span class="logo-jovi">
+                    JOVI
+                </span>
+
+                <span class="logo-smart">
+                    Smart Shot
+                </span>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- TÍTULO -->
+
+        <section class="titulo-captura">
+
+            <h1>
+                Captura inteligente
+            </h1>
+
+            <p>
+                Posicione a câmera e siga as orientações
+                para conseguir uma foto melhor.
+            </p>
+
+        </section>
+
+
+
+        <!-- ÁREA DA CÂMERA -->
+
+        <section class="area-camera">
+
+
+            <video
+                id="camera"
+                autoplay
+                playsinline>
+            </video>
+
+
+            <!-- MENSAGEM CASO A CÂMERA NÃO ESTEJA DISPONÍVEL -->
+
+            <div
+                id="mensagem-camera"
+                class="mensagem-camera">
+
+                <span class="icone-camera">
+                    ▣
+                </span>
+
+                <p>
+                    Ative o acesso à câmera para
+                    começar a captura.
+                </p>
+
+                <button
+                    id="ativar-camera"
+                    type="button">
+
+                    Ativar câmera
+
+                </button>
+
+            </div>
+
+
+            <!-- GUIA DE ENQUADRAMENTO -->
+
+            <div class="guia-enquadramento">
+
+                <span class="canto canto-superior-esquerdo"></span>
+                <span class="canto canto-superior-direito"></span>
+                <span class="canto canto-inferior-esquerdo"></span>
+                <span class="canto canto-inferior-direito"></span>
+
+            </div>
+
+
+            <!-- ORIENTAÇÃO -->
+
+            <div
+                id="orientacao"
+                class="orientacao">
+
+                <span id="icone-orientacao">
+                    ✓
+                </span>
+
+                <span id="texto-orientacao">
+                    Enquadramento adequado
+                </span>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- INDICADORES -->
+
+        <section class="indicadores">
+
+
+            <div class="indicador">
+
+                <span class="indicador-icone">
+                    ☀
+                </span>
+
+                <span>
+                    Iluminação
+                </span>
+
+            </div>
+
+
+            <div class="indicador">
+
+                <span class="indicador-icone">
+                    ◉
+                </span>
+
+                <span>
+                    Estabilidade
+                </span>
+
+            </div>
+
+
+            <div class="indicador">
+
+                <span class="indicador-icone">
+                    ↔
+                </span>
+
+                <span>
+                    Distância
+                </span>
+
+            </div>
+
+
+            <div class="indicador">
+
+                <span class="indicador-icone">
+                    ⌗
+                </span>
+
+                <span>
+                    Enquadramento
+                </span>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- BOTÃO DE CAPTURA -->
+
+        <button
+            id="capturar"
+            class="botao-capturar"
+            type="button"
+            disabled>
+
+            <span class="icone-captura">
+                ●
+            </span>
+
+            <span>
+                Capturar foto
+            </span>
+
+        </button>
+
+
+
+        <!-- VOLTAR -->
+
+        <button
+            class="voltar-texto-captura"
+            type="button"
+            onclick="window.location.href='permissao.html'">
+
+            Voltar
+
+        </button>
+
+
+
+        <!-- CANVAS INVISÍVEL -->
+
+        <canvas id="canvas"></canvas>
+
+
+    </main>
+
+
+    <script src="../assets/js/captura.js"></script>
+
+</body>
+
+</html>

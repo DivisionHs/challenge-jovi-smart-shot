@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JOVI Smart Shot - Escolha o Modo</title>
+
+    <!-- CSS específico desta página -->
+    <link rel="stylesheet" href="../assets/css/modo.css">
+
+</head>
+
+
+<body>
+
+    <main class="pagina-modo">
+
+
+        <!-- TOPO -->
+
+        <header class="topo-modo">
+
+            <button
+                class="voltar-modo"
+                type="button"
+                onclick="window.location.href='../index.html'">
+
+                ←
+
+            </button>
+
+
+            <div class="logo-modo">
+
+                <span class="logo-jovi">
+                    JOVI
+                </span>
+
+                <span class="logo-smart">
+                    Smart Shot
+                </span>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- TÍTULO -->
+
+        <section class="titulo-modo">
+
+            <h1>
+                Escolha o Modo Ideal
+            </h1>
+
+            <p>
+                Selecione o tipo de foto para obter
+                orientações personalizadas em tempo real.
+            </p>
+
+        </section>
+
+
+
+        <!-- MODOS -->
+
+        <section class="modos">
+
+
+            <!-- RETRATO -->
+
+            <button
+                class="modo selecionado"
+                type="button"
+                onclick="selecionarModo(this)">
+
+                <span class="check">
+                    ✓
+                </span>
+
+
+                <img
+                    src="../assets/images/icone-retrato.png"
+                    alt="Retrato">
+
+
+                <h2>
+                    Retrato
+                </h2>
+
+
+                <p>
+                    Dicas para destacar o rosto,
+                    luz e distância.
+                </p>
+
+            </button>
+
+
+
+            <!-- PAISAGEM -->
+
+            <button
+                class="modo"
+                type="button"
+                onclick="selecionarModo(this)">
+
+                <span class="check">
+                    ✓
+                </span>
+
+
+                <img
+                    src="../assets/images/icone-paisagem.png"
+                    alt="Paisagem">
+
+
+                <h2>
+                    Paisagem
+                </h2>
+
+
+                <p>
+                    Orientações para capturar o
+                    horizonte, luz e enquadramento.
+                </p>
+
+            </button>
+
+
+
+            <!-- GRUPO -->
+
+            <button
+                class="modo"
+                type="button"
+                onclick="selecionarModo(this)">
+
+                <span class="check">
+                    ✓
+                </span>
+
+
+                <img
+                    src="../assets/images/icone-grupo.png"
+                    alt="Grupo">
+
+
+                <h2>
+                    Grupo
+                </h2>
+
+
+                <p>
+                    Dicas para o posicionamento
+                    e enquadramento.
+                </p>
+
+            </button>
+
+
+
+            <!-- PET -->
+
+            <button
+                class="modo"
+                type="button"
+                onclick="selecionarModo(this)">
+
+                <span class="check">
+                    ✓
+                </span>
+
+
+                <img
+                    src="../assets/images/icone-pet.png"
+                    alt="Pet">
+
+
+                <h2>
+                    Pet
+                </h2>
+
+
+                <p>
+                    Orientações para capturar
+                    movimento, foco e enquadramento.
+                </p>
+
+            </button>
+
+
+        </section>
+
+
+
+        <!-- CONTINUAR -->
+
+        <button
+            class="continuar-modo"
+            type="button"
+            onclick="window.location.href='permissao.html'">
+
+            <span class="camera-modo">
+                ▣
+            </span>
+
+            <span>
+                Continuar
+            </span>
+
+        </button>
+
+
+
+        <!-- VOLTAR -->
+
+        <button
+            class="voltar-texto-modo"
+            type="button"
+            onclick="window.location.href='../index.html'">
+
+            Voltar
+
+        </button>
+
+
+
+        <!-- AVISO -->
+
+        <div class="aviso-modo">
+
+            <span class="aviso-icon-modo">
+                ⌗
+            </span>
+
+            <p>
+                As orientações mudam conforme o modo
+                escolhido.
+            </p>
+
+        </div>
+
+
+    </main>
+
+
+
+    <script>
+
+        function selecionarModo(elemento) {
+
+            const modos = document.querySelectorAll(".modo");
+
+            modos.forEach(function(modo) {
+
+                modo.classList.remove("selecionado");
+
+            });
+
+            elemento.classList.add("selecionado");
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

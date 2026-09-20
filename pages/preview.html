@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JOVI Smart Shot - Pré-visualização</title>
+
+    <link rel="stylesheet" href="../assets/css/preview.css">
+
+</head>
+
+
+<body>
+
+    <main class="pagina-preview">
+
+
+        <!-- TOPO -->
+
+        <header class="topo-preview">
+
+            <button
+                class="voltar-preview"
+                type="button"
+                onclick="window.location.href='captura.html'">
+
+                ←
+
+            </button>
+
+
+            <div class="logo-preview">
+
+                <span class="logo-jovi">
+                    JOVI
+                </span>
+
+                <span class="logo-smart">
+                    Smart Shot
+                </span>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- TÍTULO -->
+
+        <section class="titulo-preview">
+
+            <h1>
+                Sua foto está pronta!
+            </h1>
+
+            <p>
+                Confira o resultado da captura e escolha
+                o que deseja fazer com sua foto.
+            </p>
+
+        </section>
+
+
+
+        <!-- FOTO -->
+
+        <section class="area-preview">
+
+            <div class="foto-container">
+
+                <img
+                    id="foto-preview"
+                    src=""
+                    alt="Foto capturada pelo Smart Shot">
+
+                <div
+                    id="sem-foto"
+                    class="sem-foto">
+
+                    <span>
+                        ▣
+                    </span>
+
+                    <p>
+                        Nenhuma foto foi encontrada.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESUMO DA FOTO -->
+
+            <div class="resumo-foto">
+
+                <h2>
+                    Resumo da captura
+                </h2>
+
+
+                <div class="indicadores-preview">
+
+
+                    <div class="indicador-preview">
+
+                        <span class="icone-preview">
+                            ✓
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Iluminação
+                            </strong>
+
+                            <p>
+                                Adequada
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="indicador-preview">
+
+                        <span class="icone-preview">
+                            ✓
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Estabilidade
+                            </strong>
+
+                            <p>
+                                Boa
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="indicador-preview">
+
+                        <span class="icone-preview">
+                            ✓
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Enquadramento
+                            </strong>
+
+                            <p>
+                                Adequado
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- AÇÕES -->
+
+        <section class="acoes-preview">
+
+
+            <button
+                id="salvar-foto"
+                class="botao-principal"
+                type="button">
+
+                <span>
+                    ↓
+                </span>
+
+                Salvar foto
+
+            </button>
+
+
+            <button
+                id="compartilhar-foto"
+                class="botao-secundario"
+                type="button">
+
+                <span>
+                    ↗
+                </span>
+
+                Compartilhar
+
+            </button>
+
+
+            <button
+                class="botao-refazer"
+                type="button"
+                onclick="window.location.href='captura.html'">
+
+                Tirar outra foto
+
+            </button>
+
+
+        </section>
+
+
+
+        <!-- AVISO -->
+
+        <div class="aviso-preview">
+
+            <span>
+                ⌗
+            </span>
+
+            <p>
+                Você pode salvar ou compartilhar sua foto
+                quando quiser.
+            </p>
+
+        </div>
+
+
+    </main>
+
+
+    <script src="../assets/js/preview.js"></script>
+
+</body>
+
+</html>

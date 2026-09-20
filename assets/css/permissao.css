@@ -1,0 +1,502 @@
+/* ==============================
+   RESET
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f8f7fb;
+
+    color: #111;
+}
+
+
+/* ==============================
+   PÁGINA
+============================== */
+
+.pagina-permissao {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 35px 20px 40px;
+}
+
+
+/* ==============================
+   TOPO
+============================== */
+
+.topo-permissao {
+    width: 100%;
+    max-width: 900px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    margin-bottom: 45px;
+}
+
+
+.voltar-permissao {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    border: none;
+    background: transparent;
+
+    color: #4d4df5;
+
+    font-size: 32px;
+    font-weight: 300;
+
+    cursor: pointer;
+
+    padding: 0 10px;
+
+    transition: transform 0.2s ease;
+}
+
+
+.voltar-permissao:hover {
+    transform: translateX(-4px);
+}
+
+
+/* ==============================
+   LOGO
+============================== */
+
+.logo-permissao {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+.logo-jovi {
+    color: #4169e1;
+}
+
+
+.logo-smart {
+    color: #b94bd9;
+}
+
+
+/* ==============================
+   CONTEÚDO
+============================== */
+
+.conteudo-permissao {
+    width: 100%;
+    max-width: 620px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* ==============================
+   ÍCONE DA CÂMERA
+============================== */
+
+.icone-camera {
+    width: 75px;
+    height: 75px;
+
+    border-radius: 22px;
+
+    background: #eeeafd;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+}
+
+
+.icone-camera span {
+    font-size: 38px;
+
+    color: #4d4df5;
+}
+
+
+/* ==============================
+   TÍTULO
+============================== */
+
+.conteudo-permissao h1 {
+    font-size: 32px;
+    font-weight: 700;
+
+    margin-bottom: 12px;
+}
+
+
+.descricao-permissao {
+    max-width: 540px;
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    color: #333;
+
+    margin-bottom: 25px;
+}
+
+
+/* ==============================
+   SEGURANÇA
+============================== */
+
+.seguranca-permissao {
+    width: 100%;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 15px;
+
+    text-align: left;
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    margin-bottom: 22px;
+
+    box-shadow: 0 5px 18px rgba(50, 40, 120, 0.06);
+}
+
+
+.icone-seguranca {
+    min-width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    background: #e9f3f2;
+
+    color: #4d4df5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+.seguranca-permissao h2 {
+    font-size: 17px;
+
+    margin-bottom: 6px;
+}
+
+
+.seguranca-permissao p {
+    font-size: 13px;
+
+    line-height: 1.45;
+
+    color: #444;
+}
+
+
+/* ==============================
+   ORIENTAÇÕES
+============================== */
+
+.orientacoes-permissao {
+    width: 100%;
+
+    text-align: left;
+
+    margin-bottom: 25px;
+}
+
+
+.orientacoes-permissao h2 {
+    font-size: 18px;
+
+    margin-bottom: 14px;
+}
+
+
+.lista-orientacoes {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 10px;
+}
+
+
+.orientacao {
+    min-height: 75px;
+
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+
+.numero {
+    color: #b94bd9;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+/* ==============================
+   BOTÃO CÂMERA
+============================== */
+
+.botao-camera {
+    width: 100%;
+
+    height: 58px;
+
+    border: none;
+    border-radius: 35px;
+
+    background: #4d4df5;
+
+    color: white;
+
+    font-family: inherit;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 20px rgba(77, 77, 245, 0.22);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.botao-camera:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 24px rgba(77, 77, 245, 0.28);
+}
+
+
+.icone-botao {
+    font-size: 21px;
+}
+
+
+/* ==============================
+   VOLTAR
+============================== */
+
+.voltar-texto-permissao {
+    margin-top: 10px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #5a55e8;
+
+    font-family: inherit;
+
+    font-size: 17px;
+
+    cursor: pointer;
+}
+
+
+/* ==============================
+   AVISO
+============================== */
+
+.aviso-permissao {
+    width: 100%;
+
+    max-width: 455px;
+
+    min-height: 48px;
+
+    margin-top: 25px;
+
+    padding: 10px 18px;
+
+    border-radius: 12px;
+
+    background: #e9f3f2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    text-align: center;
+}
+
+
+.aviso-permissao > span {
+    color: white;
+
+    font-size: 24px;
+}
+
+
+.aviso-permissao p {
+    font-size: 12px;
+
+    color: #222;
+}
+
+
+/* ==============================
+   RESPONSIVIDADE
+============================== */
+
+@media (max-width: 700px) {
+
+    .pagina-permissao {
+        padding: 25px 15px 30px;
+    }
+
+
+    .topo-permissao {
+        margin-bottom: 35px;
+    }
+
+
+    .logo-permissao {
+        font-size: 24px;
+    }
+
+
+    .voltar-permissao {
+        font-size: 28px;
+    }
+
+
+    .conteudo-permissao h1 {
+        font-size: 27px;
+    }
+
+
+    .descricao-permissao {
+        font-size: 15px;
+    }
+
+
+    .lista-orientacoes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .botao-camera {
+        font-size: 18px;
+    }
+
+}
+
+
+@media (max-width: 430px) {
+
+    .logo-permissao {
+        font-size: 21px;
+    }
+
+
+    .voltar-permissao {
+        font-size: 25px;
+    }
+
+
+    .icone-camera {
+        width: 65px;
+        height: 65px;
+    }
+
+
+    .icone-camera span {
+        font-size: 32px;
+    }
+
+
+    .conteudo-permissao h1 {
+        font-size: 24px;
+    }
+
+
+    .seguranca-permissao {
+        padding: 16px;
+    }
+
+
+    .lista-orientacoes {
+        gap: 8px;
+    }
+
+
+    .orientacao {
+        min-height: 70px;
+    }
+
+
+    .aviso-permissao {
+        padding: 10px;
+    }
+
+}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JOVI Smart Shot</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         TELA 1 — APRESENTAÇÃO
+    ========================================== -->
+
+    <section id="tela-apresentacao" class="tela">
+
+        <header class="topo">
+
+            <button
+                class="botao-voltar"
+                type="button"
+                aria-label="Voltar">
+
+                ←
+
+            </button>
+
+            <div class="logo">
+
+                <span>JOVI</span>
+
+                <strong>Smart Shot</strong>
+
+            </div>
+
+        </header>
+
+
+        <main class="inicio">
+
+            <!-- TÍTULO -->
+
+            <section class="apresentacao">
+
+                <h1>
+                    Fotos melhores,
+                    <span>sem complicações.</span>
+                </h1>
+
+                <p>
+                    Uma câmera guiada em tempo real para
+                    ajudar você a capturar fotos melhores,
+                    mesmo sem entender de fotografia.
+                </p>
+
+            </section>
+
+
+            <!-- DEMONSTRAÇÃO DA CÂMERA -->
+
+            <section class="camera-demonstracao">
+
+                <img
+                    src="assets/images/camera-preview.png"
+                    alt="Demonstração da câmera JOVI Smart Shot">
+
+            </section>
+
+
+            <!-- =====================================
+                 MODOS DE FOTOGRAFIA
+            ====================================== -->
+
+            <section
+                class="selecao-modos"
+                aria-label="Tipos de fotografia">
+
+
+                <!-- RETRATO -->
+
+                <button
+                    class="modo-inicio"
+                    type="button"
+                    data-modo="retrato">
+
+                    <img
+                        src="assets/images/icone-retrato.png"
+                        alt="Retrato"
+                        class="icone-modo">
+
+                    <span>
+                        Retrato
+                    </span>
+
+                </button>
+
+
+                <!-- PAISAGEM -->
+
+                <button
+                    class="modo-inicio"
+                    type="button"
+                    data-modo="paisagem">
+
+                    <img
+                        src="assets/images/icone-paisagem.png"
+                        alt="Paisagem"
+                        class="icone-modo">
+
+                    <span>
+                        Paisagem
+                    </span>
+
+                </button>
+
+
+                <!-- GRUPO -->
+
+                <button
+                    class="modo-inicio"
+                    type="button"
+                    data-modo="grupo">
+
+                    <img
+                        src="assets/images/icone-grupo.png"
+                        alt="Grupo"
+                        class="icone-modo">
+
+                    <span>
+                        Grupo
+                    </span>
+
+                </button>
+
+
+                <!-- PET -->
+
+                <button
+                    class="modo-inicio"
+                    type="button"
+                    data-modo="pet">
+
+                    <img
+                        src="assets/images/icone-pet.png"
+                        alt="Pet"
+                        class="icone-modo">
+
+                    <span>
+                        Pet
+                    </span>
+
+                </button>
+
+            </section>
+
+
+            <!-- BOTÃO PRINCIPAL -->
+
+            <button
+                id="botao-comecar"
+                class="botao-continuar"
+                type="button"
+                onclick="window.location.href='pages/modo.html'">
+
+                <span class="icone-camera">
+                    ▣
+                </span>
+
+                <span>
+                    Continuar
+                </span>
+
+            </button>
+
+
+            <!-- COMO FUNCIONA -->
+
+            <button
+                id="botao-como-funciona"
+                class="botao-como-funciona"
+                type="button">
+
+                <span>
+                    Como funciona
+                </span>
+
+                <strong>
+                    &gt;
+                </strong>
+
+            </button>
+
+
+            <!-- AVISO -->
+
+            <div class="aviso-orientacoes">
+
+                <span class="icone-enquadramento">
+                    ⌗
+                </span>
+
+                <p>
+                    Orientações em tempo real para iluminação,
+                    estabilidade, enquadramento e distância
+                </p>
+
+            </div>
+
+        </main>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <p>
+            JOVI Smart Shot — Câmera guiada para fotos
+            melhores e sem complicações.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
