@@ -9,6 +9,7 @@
 
     <title>JOVI Smart Shot - Captura</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/captura.css">
 
 </head>
@@ -16,12 +17,12 @@
 
 <body>
 
-    <main class="pagina-captura">
+    <main class="pagina-captura container">
 
 
         <!-- TOPO -->
 
-        <header class="topo-captura">
+        <header class="topo-captura d-flex align-items-center justify-content-center gap-2">
 
             <button
                 class="voltar-captura"
@@ -68,7 +69,7 @@
 
         <!-- ÁREA DA CÂMERA -->
 
-        <section class="area-camera">
+        <section class="area-camera position-relative rounded-4 overflow-hidden shadow-sm">
 
 
             <video
@@ -82,7 +83,7 @@
 
             <div
                 id="mensagem-camera"
-                class="mensagem-camera">
+                class="mensagem-camera d-flex flex-column align-items-center justify-content-center text-center gap-2">
 
                 <span class="icone-camera">
                     ▣
@@ -120,7 +121,7 @@
 
             <div
                 id="orientacao"
-                class="orientacao">
+                class="orientacao d-flex align-items-center gap-2 rounded-pill">
 
                 <span id="icone-orientacao">
                     ✓
@@ -139,7 +140,7 @@
 
         <!-- INDICADORES -->
 
-        <section class="indicadores">
+        <section class="indicadores d-flex justify-content-around flex-wrap gap-2">
 
 
             <div class="indicador">
@@ -202,7 +203,7 @@
 
         <button
             id="capturar"
-            class="botao-capturar"
+            class="botao-capturar d-flex align-items-center justify-content-center gap-3 rounded-pill shadow"
             type="button"
             disabled>
 
