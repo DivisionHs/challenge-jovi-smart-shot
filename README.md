@@ -37,10 +37,9 @@ E acesse `http://localhost:8000/index.html`.
 ## Stack técnica
 
 - HTML5 semântico
-- CSS puro (um arquivo por tela) + Bootstrap 5 (utilitários de layout, espaçamento e componentes) + Bootstrap Icons (ícones SVG) + Bootstrap JS (modal "Como funciona")
+- CSS puro (um arquivo por tela) + Bootstrap 5 (utilitários de layout, espaçamento e componentes) + Bootstrap JS (modal "Como funciona")
+- Ícones em SVG puro, embutidos em cada página via sprite (`<symbol>` + `<use>`), sem nenhuma biblioteca ou CDN de ícones
 - JavaScript vanilla (câmera via `MediaDevices.getUserMedia`, captura via `<canvas>`, transição de foto entre telas via `sessionStorage`, compartilhamento via `navigator.share`)
-
-> Observação sobre escopo: o enunciado libera "Bootstrap ou Tailwind CSS". O Bootstrap Icons é um pacote irmão do Bootstrap (mesma equipe), mas tecnicamente distinto do Bootstrap CSS em si. Vale confirmar se isso é aceito na correção.
 
 ## Análise em tempo real (tela de captura)
 
