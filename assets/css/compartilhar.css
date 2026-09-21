@@ -19,6 +19,22 @@ body {
 
 
 /* ==============================
+   ÍCONES SVG (sprite embutido)
+============================== */
+
+.icone-svg {
+    width: 1em;
+    height: 1em;
+
+    fill: currentColor;
+
+    vertical-align: -0.125em;
+
+    flex-shrink: 0;
+}
+
+
+/* ==============================
    PÁGINA
 ============================== */
 
