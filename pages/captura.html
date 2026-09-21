@@ -10,6 +10,7 @@
     <title>JOVI Smart Shot - Captura</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/captura.css">
 
 </head>
@@ -29,7 +30,7 @@
                 type="button"
                 onclick="window.location.href='permissao.html'">
 
-                ←
+                <i class="bi bi-arrow-left"></i>
 
             </button>
 
@@ -54,11 +55,11 @@
 
         <section class="titulo-captura">
 
-            <h1>
+            <h1 id="titulo-captura-modo">
                 Captura inteligente
             </h1>
 
-            <p>
+            <p id="descricao-captura-modo">
                 Posicione a câmera e siga as orientações
                 para conseguir uma foto melhor.
             </p>
@@ -69,7 +70,7 @@
 
         <!-- ÁREA DA CÂMERA -->
 
-        <section class="area-camera position-relative rounded-4 overflow-hidden shadow-sm">
+        <section class="area-camera position-relative overflow-hidden">
 
 
             <video
@@ -83,13 +84,13 @@
 
             <div
                 id="mensagem-camera"
-                class="mensagem-camera d-flex flex-column align-items-center justify-content-center text-center gap-2">
+                class="mensagem-camera">
 
                 <span class="icone-camera">
-                    ▣
+                    <i class="bi bi-camera-video-off"></i>
                 </span>
 
-                <p>
+                <p id="mensagem-camera-texto">
                     Ative o acesso à câmera para
                     começar a captura.
                 </p>
@@ -140,10 +141,10 @@
 
         <!-- INDICADORES -->
 
-        <section class="indicadores d-flex justify-content-around flex-wrap gap-2">
+        <section class="indicadores">
 
 
-            <div class="indicador">
+            <div id="indicador-iluminacao" class="indicador">
 
                 <span class="indicador-icone">
                     ☀
@@ -156,7 +157,7 @@
             </div>
 
 
-            <div class="indicador">
+            <div id="indicador-estabilidade" class="indicador">
 
                 <span class="indicador-icone">
                     ◉
@@ -169,7 +170,7 @@
             </div>
 
 
-            <div class="indicador">
+            <div id="indicador-distancia" class="indicador">
 
                 <span class="indicador-icone">
                     ↔
@@ -182,7 +183,7 @@
             </div>
 
 
-            <div class="indicador">
+            <div id="indicador-enquadramento" class="indicador">
 
                 <span class="indicador-icone">
                     ⌗
@@ -203,7 +204,7 @@
 
         <button
             id="capturar"
-            class="botao-capturar d-flex align-items-center justify-content-center gap-3 rounded-pill shadow"
+            class="botao-capturar d-flex align-items-center justify-content-center gap-3 rounded-pill"
             type="button"
             disabled>
 
