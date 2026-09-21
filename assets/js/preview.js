@@ -32,6 +32,82 @@ if (foto) {
 
 
 /* ==============================
+   FORMATO DO CONTAINER CONFORME O MODO ESCOLHIDO
+   A foto já vem recortada no formato certo desde a captura, aqui só
+   ajustamos a caixa que a exibe pra não forçar tudo no mesmo formato.
+============================== */
+
+const ASPECTO_POR_MODO = {
+    retrato: 4 / 5,
+    paisagem: 16 / 9,
+    grupo: 3 / 2,
+    pet: 1
+};
+
+const fotoContainer = document.querySelector(".foto-container");
+
+if (fotoContainer) {
+
+    const modoUsado = sessionStorage.getItem("modoSmartShot") || "retrato";
+
+    const aspectoUsado = ASPECTO_POR_MODO[modoUsado] || ASPECTO_POR_MODO.retrato;
+
+    fotoContainer.style.aspectRatio = aspectoUsado;
+
+    fotoContainer.style.height = "auto";
+
+}
+
+
+/* ==============================
+   RESUMO DA ANÁLISE FEITA NO MOMENTO DA CAPTURA
+============================== */
+
+const rotulos = {
+    iluminacao: { boa: "Adequada", baixa: "Baixa, ambiente escuro", alta: "Alta, evite contraluz", estourada: "Estourada, muita luz direta" },
+    estabilidade: { estavel: "Boa", instavel: "Instável, houve tremor" },
+    enquadramento: { adequado: "Adequado", ajustar: "Centralize melhor o objeto" },
+    distancia: { adequada: "Adequada", perto: "Muito perto, afaste-se um pouco", longe: "Muito longe, aproxime-se" }
+};
+
+function preencherResumo(chave, valorId, iconeId) {
+
+    const analiseSalva = sessionStorage.getItem("analiseSmartShot");
+
+    const valorElemento = document.getElementById(valorId);
+
+    const iconeElemento = document.getElementById(iconeId);
+
+    if (!analiseSalva || !valorElemento || !iconeElemento) {
+        return;
+    }
+
+    const analise = JSON.parse(analiseSalva);
+
+    const status = analise[chave];
+
+    const adequado = status === "boa" || status === "estavel" || status === "adequado" || status === "adequada";
+
+    valorElemento.textContent = rotulos[chave][status] || "Não analisado";
+
+    iconeElemento.textContent = adequado ? "✓" : "✗";
+
+    iconeElemento.classList.remove("text-success", "text-danger");
+
+    iconeElemento.classList.add(adequado ? "text-success" : "text-danger");
+
+}
+
+preencherResumo("iluminacao", "valor-resumo-iluminacao", "icone-resumo-iluminacao");
+
+preencherResumo("estabilidade", "valor-resumo-estabilidade", "icone-resumo-estabilidade");
+
+preencherResumo("enquadramento", "valor-resumo-enquadramento", "icone-resumo-enquadramento");
+
+preencherResumo("distancia", "valor-resumo-distancia", "icone-resumo-distancia");
+
+
+/* ==============================
    SALVAR FOTO
 ============================== */
 

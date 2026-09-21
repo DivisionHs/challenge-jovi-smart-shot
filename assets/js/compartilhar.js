@@ -32,6 +32,32 @@ if (foto) {
 
 
 /* ==============================
+   FORMATO DO CONTAINER CONFORME O MODO ESCOLHIDO
+============================== */
+
+const ASPECTO_POR_MODO = {
+    retrato: 4 / 5,
+    paisagem: 16 / 9,
+    grupo: 3 / 2,
+    pet: 1
+};
+
+const fotoContainerCompartilhar = document.querySelector(".foto-compartilhar");
+
+if (fotoContainerCompartilhar) {
+
+    const modoUsado = sessionStorage.getItem("modoSmartShot") || "retrato";
+
+    const aspectoUsado = ASPECTO_POR_MODO[modoUsado] || ASPECTO_POR_MODO.retrato;
+
+    fotoContainerCompartilhar.style.aspectRatio = aspectoUsado;
+
+    fotoContainerCompartilhar.style.height = "auto";
+
+}
+
+
+/* ==============================
    SALVAR FOTO
 ============================== */
 
