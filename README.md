@@ -37,8 +37,20 @@ E acesse `http://localhost:8000/index.html`.
 ## Stack técnica
 
 - HTML5 semântico
-- CSS puro (um arquivo por tela) + Bootstrap 5 (utilitários de layout, espaçamento e componentes)
+- CSS puro (um arquivo por tela) + Bootstrap 5 (utilitários de layout, espaçamento e componentes) + Bootstrap Icons (ícones SVG) + Bootstrap JS (modal "Como funciona")
 - JavaScript vanilla (câmera via `MediaDevices.getUserMedia`, captura via `<canvas>`, transição de foto entre telas via `sessionStorage`, compartilhamento via `navigator.share`)
+
+> Observação sobre escopo: o enunciado libera "Bootstrap ou Tailwind CSS". O Bootstrap Icons é um pacote irmão do Bootstrap (mesma equipe), mas tecnicamente distinto do Bootstrap CSS em si. Vale confirmar se isso é aceito na correção.
+
+## Análise em tempo real (tela de captura)
+
+A cada ~400ms, o frame da câmera é analisado num canvas de baixa resolução (81×60), dividido numa grade 3×3 (fotometria por zonas, como um fotômetro de câmera real):
+
+- **Iluminação**: média de brilho ponderada pelas zonas + detecção de estouro de luz (percentual de pixels quase brancos).
+- **Estabilidade**: diferença entre o frame atual e o anterior (proxy de tremor/movimento).
+- **Enquadramento/Distância**: contraste da área de "sujeito" comparado com os cantos do quadro (proxy de separação sujeito/fundo). Não é detecção de rosto real, que exigiria uma biblioteca fora do escopo permitido.
+
+Cada modo usa uma estratégia de zona diferente (ver `assets/js/captura.js`, `ESTRATEGIA_ZONA`): Retrato mede o centro, Grupo mede a faixa horizontal do meio, Pet mede uma área em cruz mais tolerante, Paisagem mede o quadro inteiro. A foto final também é recortada num formato diferente por modo (retrato 4:5, paisagem 16:9, grupo 3:2, pet 1:1).
 
 ## Equipe (Sprint 2)
 
@@ -50,4 +62,6 @@ E acesse `http://localhost:8000/index.html`.
 
 ## Status
 
-O fluxo de navegação e a captura real de fotos (câmera, canvas, download, compartilhamento) estão funcionais. A análise em tempo real de iluminação/estabilidade/distância/enquadramento ainda é apenas visual (textos fixos), a lógica de análise real está em desenvolvimento.
+Fluxo de navegação, captura real de fotos (câmera, canvas, download, compartilhamento) e análise em tempo real dos 4 indicadores (iluminação, estabilidade, distância, enquadramento) estão funcionais, com comportamento diferente por modo de foto.
+
+Pendência conhecida: o texto dos quadrinhos de aviso (ícone + mensagem) não está centralizando corretamente em todas as telas, mesmo com o CSS aparentemente correto (`display: grid`, `width: 100%`, `text-align: center` confirmados via DevTools). Não é bloqueante para o uso do app, fica como ajuste futuro.
