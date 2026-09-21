@@ -59,37 +59,12 @@ body {
 }
 
 
-.botao-voltar {
-    position: absolute;
-
-    left: 0;
-
-    top: 50%;
-
-    transform: translateY(-50%);
-
-    border: none;
-
-    background: transparent;
-
-    color: #4c4df5;
-
-    font-size: 30px;
-
-    font-weight: bold;
-
-    line-height: 1;
-
-    cursor: pointer;
-}
-
-
 /* LOGO */
 
 .logo {
     display: flex;
 
-    align-items: center;
+    align-items: baseline;
 
     gap: 8px;
 
@@ -387,17 +362,19 @@ body {
 
     background-color: #e9f2f0;
 
-    display: flex;
+    display: grid;
+
+    grid-template-columns: auto 1fr;
 
     align-items: center;
-
-    justify-content: center;
 
     gap: 9px;
 }
 
 
 .aviso-orientacoes p {
+    width: 100%;
+
     margin: 0;
 
     font-size: 11px;
@@ -406,12 +383,12 @@ body {
 
     color: #363636;
 
-    text-align: left;
+    text-align: center;
 }
 
 
 .icone-enquadramento {
-    color: #ffffff;
+    color: #4c4df5;
 
     font-size: 22px;
 
@@ -552,4 +529,39 @@ footer {
     .aviso-orientacoes {
         max-width: 600px;
     }
+}
+
+
+/* =========================================
+   MODAL "COMO FUNCIONA" NA PALETA DO PROJETO
+========================================= */
+
+#modalComoFunciona .modal-title {
+    color: #4c4df5;
+}
+
+
+#modalComoFunciona .btn-primary {
+    background-color: #4c4df5;
+
+    border-color: #4c4df5;
+}
+
+
+#modalComoFunciona .btn-primary:hover {
+    background-color: #3d3ed6;
+
+    border-color: #3d3ed6;
+}
+
+
+#modalComoFunciona ul {
+    padding-left: 20px;
+
+    margin-bottom: 14px;
+}
+
+
+#modalComoFunciona li {
+    margin-bottom: 6px;
 }

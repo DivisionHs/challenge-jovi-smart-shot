@@ -85,22 +85,24 @@ body {
 
 .logo-captura {
     display: flex;
-    align-items: center;
+    align-items: baseline;
 
     gap: 8px;
 
-    font-size: 30px;
+    font-size: 27px;
     font-weight: 700;
 }
 
 
 .logo-jovi {
-    color: #4169e1;
+    color: #3f63f4;
 }
 
 
 .logo-smart {
-    color: #b94bd9;
+    background: linear-gradient(90deg, #4d5df5, #d34fad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 

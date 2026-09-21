@@ -85,22 +85,24 @@ body {
 
 .logo-compartilhar {
     display: flex;
-    align-items: center;
+    align-items: baseline;
 
     gap: 8px;
 
-    font-size: 30px;
+    font-size: 27px;
     font-weight: 700;
 }
 
 
 .logo-jovi {
-    color: #4169e1;
+    color: #3f63f4;
 }
 
 
 .logo-smart {
-    color: #b94bd9;
+    background: linear-gradient(90deg, #4d5df5, #d34fad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
@@ -406,10 +408,10 @@ body {
 
     background: #e9f3f2;
 
-    display: flex;
+    display: grid;
 
+    grid-template-columns: auto 1fr;
     align-items: center;
-    justify-content: center;
 
     gap: 9px;
 
@@ -418,16 +420,20 @@ body {
 
 
 .aviso-compartilhar > span {
-    color: white;
+    color: #4d4df5;
 
     font-size: 22px;
 }
 
 
 .aviso-compartilhar p {
+    width: 100%;
+
     font-size: 11px;
 
     color: #222;
+
+    text-align: center;
 }
 
 
